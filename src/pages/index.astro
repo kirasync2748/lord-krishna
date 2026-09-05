@@ -1,0 +1,234 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import Footer from "../components/Footer.astro";
+import {
+  ashtottaraIntro,
+  names108,
+  ashtottaraClosing,
+  namaMahimaOpening,
+  namaMahima,
+  chautrishVerses,
+  chautrishClosing,
+  shukaSharira,
+  radhaBarMas,
+} from "../data/content";
+---
+
+<Layout>
+  <Hero />
+
+  {/* 108 Names Section */}
+  <Section id="ashtottara" title="শ্রীশ্রীকৃষ্ণের অষ্টোত্তর শতনাম" subtitle="১০৮ নাম">
+    <div class="intro-verses">
+      {ashtottaraIntro.map((line) => <p>{line}</p>)}
+    </div>
+
+    <div class="names-grid">
+      {names108.map((item) => (
+        <div class="name-card">
+          <span class="num-badge">{item.num}</span>
+          <span class="name-text">{item.text}</span>
+        </div>
+      ))}
+    </div>
+
+
+  </Section>
+
+  {/* Nama Mahima Section */}
+  <Section id="mahima" title="নাম মহিমা" subtitle="নামের মাহাত্ম্য" ornament="✦">
+    <div class="verse-block">
+      {namaMahimaOpening.map((line) => <p>{line}</p>)}
+      {namaMahima.map((line) => <p>{line}</p>)}
+    </div>
+
+    <div class="verse-divider"></div>
+
+    <div class="verse-block nama-mahima-extra">
+      <p>কৃষ্ণ নাম হরিনাম বড়ই মধুর।</p>
+      <p>যেই জন কৃষ্ণ ভজে সে বড় চতুর॥</p>
+      <p>ব্রহ্মা আদি দেব যারে ধ্যানে নাহি পায়।</p>
+      <p>সে হরি বঞ্চিত হলে কি হবে উপায়॥</p>
+      <p>হিরণ্য কশিপুর উদর-বিদারন।</p>
+      <p>প্রহলাদরে করিল রক্ষা দেব নারায়ণ॥</p>
+      <p>বলীরে ছলিতে প্রভু হইল বামন।</p>
+      <p>দৌপদীর লজ্জা 'হরি' কৈল্য নিবারণ॥</p>
+      <p>অষ্টোত্তর শতনাম যে করে পঠন।</p>
+      <p>অনায়াসে পায় সে রাধা কৃষ্ণে চরণ॥</p>
+      <p>ভক্তবাঞ্ছা পূর্ণ করে নন্দের নন্দন।</p>
+      <p>মথুরায় কংশ ধ্বংস লঙ্কার রাবণ॥</p>
+      <p>বকাসুর বধ আদি কালিয়া-দমন।</p>
+      <p>নরোত্তম কহে এই নাম সংকীর্তন॥</p>
+    </div>
+  </Section>
+
+  {/* Chautrish Padabali Section */}
+  <Section id="chautrish" title="চৌত্রিশ পদাবলী" subtitle="শ্রীনরোত্তম দাস" ornament="❀">
+    <div class="letter-verses">
+      {chautrishVerses.map((v) => (
+        <div class="letter-verse">
+          <span class="letter">{v.letter}.</span>
+          <span class="verse-text">{v.text}</span>
+        </div>
+      ))}
+    </div>
+
+    <div class="closing-verses">
+      {chautrishClosing.map((line) => <p>{line}</p>)}
+    </div>
+  </Section>
+
+  {/* Shuka Sharira Dvandva Section */}
+  <Section id="shuka" title={shukaSharira.title} subtitle="শুক ও শারীর বিতর্ক" ornament="❁">
+    <div class="verse-block shuka-verses">
+      {shukaSharira.verses.map((line) => <p>{line}</p>)}
+    </div>
+  </Section>
+
+  {/* Radha Bar Mash Section */}
+  <Section id="radha-bar-mas" title={radhaBarMas.title} subtitle={radhaBarMas.subtitle} ornament="❀">
+    <div class="verse-block">
+      {radhaBarMas.verses.map((line) => <p>{line}</p>)}
+    </div>
+  </Section>
+
+  <Footer />
+</Layout>
+
+<style>
+  .intro-verses,
+  .closing-verses {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--maroon-dark);
+    line-height: 2.1;
+    margin-bottom: 2rem;
+  }
+
+  .closing-verses {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px dashed rgba(212, 160, 23, 0.4);
+  }
+
+  .names-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .name-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    background: linear-gradient(135deg, rgba(254, 249, 240, 0.6), rgba(253, 244, 227, 0.4));
+    border: 1px solid rgba(212, 160, 23, 0.15);
+    transition: all 0.2s ease;
+  }
+
+  .name-card:hover {
+    border-color: var(--saffron);
+    box-shadow: 0 2px 12px rgba(249, 115, 22, 0.12);
+    transform: translateY(-1px);
+  }
+
+  .num-badge {
+    flex-shrink: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(249, 115, 22, 0.3);
+  }
+
+  .name-text {
+    font-size: 0.95rem;
+    color: var(--ink);
+    line-height: 1.6;
+    padding-top: 0.2rem;
+  }
+
+  .verse-block {
+    text-align: center;
+    font-size: 1.15rem;
+    color: var(--maroon-dark);
+    line-height: 2.2;
+  }
+
+  .verse-block p {
+    margin-bottom: 0.35rem;
+  }
+
+  .verse-divider {
+    margin: 1.75rem auto;
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(212, 160, 23, 0.4), transparent);
+  }
+
+  .shuka-verses {
+    text-align: left;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+
+  .shuka-verses p {
+    margin-bottom: 0.6rem;
+    padding-left: 0;
+  }
+
+  .letter-verses {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 2rem 0;
+    padding: 1.5rem 1rem;
+    border-top: 1px dashed rgba(212, 160, 23, 0.4);
+    border-bottom: 1px dashed rgba(212, 160, 23, 0.4);
+  }
+
+  .letter-verse {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
+
+  .letter {
+    flex-shrink: 0;
+    width: 1.8rem;
+    height: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--maroon-dark);
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-top: 0.1rem;
+  }
+
+  .verse-text {
+    color: var(--ink);
+    padding-top: 0.15rem;
+  }
+
+  @media (max-width: 600px) {
+    .names-grid { grid-template-columns: 1fr; }
+    .intro-verses, .verse-block, .closing-verses { font-size: 1rem; }
+    .letter-verse { font-size: 0.95rem; }
+  }
+</style>

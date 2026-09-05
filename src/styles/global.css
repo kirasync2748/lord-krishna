@@ -1,0 +1,35 @@
+:root {
+  --saffron: #FF8C00;
+  --deep-saffron: #E45A00;
+  --maroon: #6B1B1B;
+  --gold: #D4A017;
+  --gold-light: #F0D080;
+  --cream: #FFF8EE;
+  --peach: #FFE4C4;
+  --dark: #2D1B0E;
+  --dark-soft: #4A3020;
+  --krishna-blue: #1A3A6B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Noto Serif Bengali', 'SolaimanLipi', 'Kalpurush', serif;
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

@@ -1,0 +1,66 @@
+---
+export interface Props {
+  title?: string;
+}
+const { title = "শ্রীশ্রীকৃষ্ণের অষ্টোত্তর শতনাম" } = Astro.props;
+---
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="শ্রীশ্রীকৃষ্ণের অষ্টোত্তর শতনাম ও চৌত্রিশ পদাবলী — ভক্তিমূলক সংকলন" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href="/krishna.png" />
+    <link rel="apple-touch-icon" href="/krishna.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;500;600;700;800&family=Tiro+Bangla:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --saffron: #f97316;
+    --saffron-dark: #c2410c;
+    --saffron-light: #fdba74;
+    --gold: #d4a017;
+    --gold-light: #f5d061;
+    --maroon: #7c2d12;
+    --maroon-dark: #431407;
+    --cream: #fef9f0;
+    --cream-dark: #fdf4e3;
+    --ink: #1c1917;
+    --peacock: #0d9488;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Noto Serif Bengali", "Tiro Bangla", serif;
+    background: linear-gradient(180deg, var(--cream) 0%, var(--cream-dark) 100%);
+    color: var(--ink);
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: var(--saffron-light);
+    color: var(--maroon-dark);
+  }
+</style>

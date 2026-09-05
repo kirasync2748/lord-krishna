@@ -1,0 +1,92 @@
+---
+const navItems = [
+  { href: "#108-names", label: "১০৮ নাম" },
+  { href: "#nama-mahima", label: "নাম মাহাত্ম্য" },
+  { href: "#padabali", label: "চৌত্রিশ পদাবলী" },
+  { href: "#shuka-sharira", label: "শুক শারীর দ্বন্দ্ব" },
+];
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#top" class="logo">
+      <span class="flute">𑁍</span>
+      <span class="logo-text">শ্রীশ্রীকৃষ্ণ</span>
+    </a>
+    <nav class="nav">
+      {navItems.map((item) => (
+        <a href={item.href}>{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(135deg, var(--maroon), var(--dark));
+    backdrop-filter: blur(8px);
+    border-bottom: 3px solid var(--gold);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  .header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--gold-light);
+  }
+
+  .flute {
+    color: var(--saffron);
+    font-size: 1.5rem;
+  }
+
+  .nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .nav a {
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    transition: all 0.3s ease;
+  }
+
+  .nav a:hover {
+    background: rgba(255, 140, 0, 0.2);
+    color: var(--gold-light);
+  }
+
+  @media (max-width: 600px) {
+    .header-inner {
+      justify-content: center;
+      text-align: center;
+    }
+    .nav {
+      justify-content: center;
+    }
+    .nav a {
+      font-size: 0.85rem;
+      padding: 0.3rem 0.6rem;
+    }
+  }
+</style>

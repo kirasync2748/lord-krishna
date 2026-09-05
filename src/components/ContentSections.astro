@@ -1,0 +1,293 @@
+---
+import {
+  ashtottaraIntro,
+  names108,
+  ashtottaraClosing,
+  namaMahima,
+  chautrishIntro,
+  chautrishVerses,
+  chautrishClosing,
+  shukaSharira,
+} from '../data/content';
+---
+
+<!-- Section: 108 Names -->
+<section id="108-names" class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-icon">❁</span>
+      <h2 class="section-title">শ্রীশ্রীকৃষ্ণের অষ্টোত্তর শতনাম</h2>
+      <p class="section-subtitle">১০৮ পবিত্র নাম</p>
+    </div>
+
+    <!-- Invocation verses -->
+    <div class="verse-card intro-verses">
+      {ashtottaraIntro.map((line) => (
+        <p class="verse-line">{line}</p>
+      ))}
+    </div>
+
+    <!-- 108 Names grid -->
+    <div class="names-grid">
+      {names108.map((item) => (
+        <div class="name-item">
+          <span class="name-number">{item.num}</span>
+          <span class="name-text">{item.text}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Closing verses after 108 names -->
+    <div class="verse-card closing-verses">
+      {ashtottaraClosing.map((line) => (
+        <p class="verse-line">{line}</p>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Section: Nama Mahima -->
+<section id="nama-mahima" class="section alt-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-icon">❁</span>
+      <h2 class="section-title">নাম মাহাত্ম্য</h2>
+      <p class="section-subtitle">নামের মহিমা</p>
+    </div>
+
+    <div class="verse-card">
+      {namaMahima.map((line) => (
+        <p class="verse-line">{line}</p>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Section: Chautrish Padabali -->
+<section id="padabali" class="section">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-icon">❁</span>
+      <h2 class="section-title">চৌত্রিশ পদাবলী</h2>
+      <p class="section-subtitle">নরোত্তম দাসের পদাবলী</p>
+    </div>
+
+    <!-- Intro verses -->
+    <div class="verse-card">
+      {chautrishIntro.map((line) => (
+        <p class="verse-line">{line}</p>
+      ))}
+    </div>
+
+    <!-- Alphabetical verses -->
+    <div class="alphabet-grid">
+      {chautrishVerses.map((item) => (
+        <div class="alpha-item">
+          <span class="alpha-letter">{item.letter}</span>
+          <span class="alpha-text">{item.text}</span>
+        </div>
+      ))}
+    </div>
+
+    <!-- Closing verses -->
+    <div class="verse-card closing-verses">
+      {chautrishClosing.map((line) => (
+        <p class="verse-line">{line}</p>
+      ))}
+    </div>
+  </div>
+</section>
+
+<!-- Section: Shuka Sharira Dvandva -->
+<section id="shuka-sharira" class="section alt-bg">
+  <div class="section-inner">
+    <div class="section-header">
+      <span class="section-icon">❁</span>
+      <h2 class="section-title">শুক শারীর দ্বন্দ্ব</h2>
+      <p class="section-subtitle">শুক ও শারীরের বিতর্ক</p>
+    </div>
+
+    <div class="verse-card">
+      {shukaSharira.verses.map((line) => (
+        <p class="verse-line">{line}</p>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .alt-bg {
+    background: linear-gradient(180deg, var(--peach) 0%, var(--cream) 100%);
+  }
+
+  .section-inner {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-icon {
+    display: block;
+    color: var(--saffron);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--maroon);
+    margin-bottom: 0.3rem;
+  }
+
+  .section-subtitle {
+    color: var(--gold);
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+  .verse-card {
+    background: white;
+    border: 2px solid var(--gold-light);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 12px rgba(107, 27, 27, 0.08);
+    position: relative;
+  }
+
+  .verse-card::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(212, 160, 23, 0.3);
+    border-radius: 8px;
+    pointer-events: none;
+  }
+
+  .verse-line {
+    font-size: 1.1rem;
+    line-height: 2.2;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 0.2rem;
+  }
+
+  .closing-verses {
+    border-style: dashed;
+    background: linear-gradient(135deg, #fff, var(--peach));
+  }
+
+  /* 108 Names grid */
+  .names-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .name-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid rgba(212, 160, 23, 0.25);
+    transition: all 0.2s ease;
+  }
+
+  .name-item:hover {
+    background: var(--peach);
+    border-color: var(--gold);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 140, 0, 0.15);
+  }
+
+  .name-number {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--saffron), var(--deep-saffron));
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  .name-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark);
+    padding-top: 0.3rem;
+  }
+
+  /* Alphabetical grid */
+  .alphabet-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .alpha-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    background: white;
+    border: 1px solid rgba(212, 160, 23, 0.25);
+    transition: all 0.2s ease;
+  }
+
+  .alpha-item:hover {
+    background: var(--peach);
+    border-color: var(--gold);
+  }
+
+  .alpha-letter {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--maroon), var(--dark-soft));
+    color: var(--gold-light);
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .alpha-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--dark);
+    padding-top: 0.3rem;
+  }
+
+  @media (min-width: 640px) {
+    .alphabet-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .names-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

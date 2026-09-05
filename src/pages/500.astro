@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="ত্রুটি — ৫০০">
+  <div class="error-page">
+    <div class="krishna-circle">
+      <img src="/krishna.png" alt="শ্রীকৃষ্ণ" />
+    </div>
+    <div class="om">ॐ</div>
+    <h1>৫০০</h1>
+    <h2>সার্ভার ত্রুটি</h2>
+    <p>কিছু একটা ভুল হয়েছে। দয়া করে কিছুক্ষণ পরে আবার চেষ্টা করুন।</p>
+    <p class="sub">কৃষ্ণের কৃপায় সব ঠিক হয়ে যাবে ॥</p>
+    <a href="/" class="back-home">← মূল পৃষ্ঠায় ফিরে যান</a>
+  </div>
+</Layout>
+
+<style>
+  .error-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(160deg, #431407 0%, #1a0a05 100%);
+  }
+
+  .krishna-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--gold);
+    box-shadow: 0 0 30px rgba(212, 160, 23, 0.3);
+    margin-bottom: 1.5rem;
+  }
+
+  .krishna-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .om {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--saffron);
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .sub {
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .back-home {
+    display: inline-block;
+    padding: 0.7rem 1.8rem;
+    background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+    color: white;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .back-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+  }
+</style>

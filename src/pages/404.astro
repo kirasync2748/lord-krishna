@@ -1,0 +1,152 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="পৃষ্ঠা পাওয়া যায়নি — ৪০৪">
+  <div class="not-found">
+    <div class="card">
+      <img src="/krishna.png" alt="শ্রীকৃষ্ণ" class="krishna-icon" />
+      <span class="om">ॐ</span>
+      <h1>৪০৪</h1>
+      <h2>আপনি ভুল পথে আছেন</h2>
+      <p class="message">ভয় করবেন না — শ্রীকৃষ্ণ আপনাকে সঠিক পথ দেখাবেন।</p>
+
+      <div class="gita-shloka">
+        <p class="gita-verse">
+          সর্ব-ধর্মান্ পরিত্যজ্য মামেকং শরণং ব্রজ।<br />
+          অহং ত্বা সর্ব-পাপেভ্যো মোক্ষয়িষ্যামি মা শুচঃ॥
+        </p>
+        <p class="gita-ref">— শ্রীমদ্ভগবদ্গীতা ১৮.৬৬</p>
+        <p class="gita-meaning">
+          সব ধর্ম পরিত্যাগ করে একমাত্র আমারই শরণ গ্রহণ কর।<br />
+          আমি তোমাকে সব পাপ থেকে মুক্তি দেব — ভয় করো না।
+        </p>
+      </div>
+
+      <a href="/" class="back-home">← কৃষ্ণের পথে ফিরে যান</a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .not-found {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: linear-gradient(160deg, #431407 0%, #1a0a05 100%);
+  }
+
+  .card {
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .krishna-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gold);
+    box-shadow: 0 0 12px rgba(212, 160, 23, 0.3);
+    margin-bottom: 0.75rem;
+  }
+
+  .om {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--saffron);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 0.6rem;
+  }
+
+  .message {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .gita-shloka {
+    margin: 1.25rem 0;
+    padding: 1rem;
+    border: 1px solid rgba(212, 160, 23, 0.25);
+    border-radius: 10px;
+    background: rgba(212, 160, 23, 0.05);
+  }
+
+  .gita-verse {
+    color: var(--gold-light);
+    font-size: 0.95rem;
+    line-height: 1.85;
+    margin-bottom: 0.35rem;
+  }
+
+  .gita-ref {
+    color: var(--saffron);
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .gita-meaning {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.82rem;
+    line-height: 1.55;
+    font-style: italic;
+  }
+
+  .back-home {
+    display: inline-block;
+    padding: 0.65rem 1.5rem;
+    background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+    color: white;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .back-home:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(249, 115, 22, 0.45);
+  }
+
+  @media (min-width: 480px) {
+    .card { padding: 2rem 1.75rem; }
+    .krishna-icon { width: 80px; height: 80px; }
+    h1 { font-size: 3.5rem; }
+    h2 { font-size: 1.35rem; }
+    .message { font-size: 1rem; }
+    .gita-verse { font-size: 1.1rem; }
+    .gita-ref { font-size: 0.85rem; }
+    .gita-meaning { font-size: 0.88rem; }
+    .back-home { font-size: 1.05rem; padding: 0.75rem 1.8rem; }
+  }
+
+  @media (min-width: 768px) {
+    .card { max-width: 480px; padding: 2.5rem; }
+    .krishna-icon { width: 90px; height: 90px; }
+    h1 { font-size: 4rem; }
+  }
+</style>

@@ -1,0 +1,163 @@
+---
+---
+
+<section id="top" class="hero">
+  <div class="hero-bg">
+    <img src="/krishna.png" alt="শ্রীকৃষ্ণ" class="krishna-img" />
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="krishna-portrait">
+      <img src="/krishna.png" alt="শ্রীকৃষ্ণ" />
+    </div>
+    <p class="hero-subtitle">শ্রী রাধা কৃষ্ণের প্রণাম</p>
+    <h1 class="hero-title">শ্রীশ্রীকৃষ্ণের অষ্টোত্তর শতনাম</h1>
+    <div class="hero-divider">
+      <span class="line"></span>
+      <span class="om">❁</span>
+      <span class="line"></span>
+    </div>
+    <p class="hero-description">
+      ১০৮ নাম, চৌত্রিশ পদাবলী ও শুক শারীর দ্বন্দ্ব —
+      <br />
+      ভক্তি ভরে শ্রীকৃষ্ণের নাম সংকীর্তন
+    </p>
+    <a href="#ashtottara" class="hero-cta">পড়তে শুরু করুন ↓</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(160deg, #431407 0%, #1a0a05 100%);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .krishna-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    filter: blur(2px) saturate(1.1);
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(26, 10, 5, 0.7) 0%,
+      rgba(67, 20, 7, 0.5) 40%,
+      rgba(26, 10, 5, 0.85) 100%
+    );
+    pointer-events: none;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    max-width: 700px;
+  }
+
+  .krishna-portrait {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--gold);
+    box-shadow:
+      0 0 30px rgba(212, 160, 23, 0.4),
+      0 8px 32px rgba(0, 0, 0, 0.5);
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  .krishna-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px rgba(212, 160, 23, 0.3), 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+    to {
+      box-shadow: 0 0 40px rgba(212, 160, 23, 0.6), 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .hero-subtitle {
+    color: var(--gold);
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--gold-light);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.6);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .hero-divider .line {
+    height: 2px;
+    width: 60px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  }
+
+  .hero-divider .om {
+    color: var(--saffron);
+    font-size: 1.5rem;
+  }
+
+  .hero-description {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .hero-cta {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: linear-gradient(135deg, var(--saffron), var(--saffron-dark));
+    color: white;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(249, 115, 22, 0.5);
+  }
+</style>
